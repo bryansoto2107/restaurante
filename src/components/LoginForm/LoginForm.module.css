@@ -1,0 +1,116 @@
+/* src/components/LoginForm/LoginForm.module.css */
+
+/* Variables de colores para fácil modificación */
+:root {
+  --primary-bg-color: #36393F; /* Gris oscuro de fondo */
+  --card-bg-color: #2F3136;    /* Gris más oscuro para la tarjeta */
+  --text-color-light: #F0F2F5; /* Texto claro */
+  --text-color-muted: #B9BBBE; /* Texto más apagado */
+  --input-bg-color: #202225;   /* Fondo de input aún más oscuro */
+  --input-border-color: #1A1C1F; /* Borde de input */
+  --button-bg-color: #7289DA;  /* Azul característico */
+  --button-hover-color: #677BC4; /* Azul al pasar el ratón */
+  --error-color: #F04747;      /* Rojo para errores */
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Altura completa de la ventana */
+  background-color: var(--primary-bg-color);
+  font-family: 'Arial', sans-serif; /* Puedes usar 'Poppins', 'Roboto' u otra fuente si la importas */
+}
+
+.loginCard {
+  background-color: var(--card-bg-color);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para el panel central */
+  box-sizing: border-box; /* Incluir padding y borde en el ancho */
+}
+
+.titleInicio {
+  color: var(--text-color-light);
+  font-size: 2.8em; /* Tamaño grande para "INICIO" */
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.subtitleBienvenido {
+  color: var(--text-color-muted);
+  font-size: 1.1em; /* Tamaño más pequeño para "BIENVENIDO" */
+  margin-bottom: 30px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre los grupos de input */
+}
+
+.inputGroup {
+  text-align: left;
+}
+
+.label {
+  display: block;
+  color: var(--text-color-muted);
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  color: var(--text-color-light);
+  font-size: 1em;
+  box-sizing: border-box; /* Asegura que el padding no aumente el ancho */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.inputField::placeholder {
+  color: var(--text-color-muted);
+  opacity: 0.7; /* Para que el placeholder sea un poco más suave */
+}
+
+.inputField:focus {
+  border-color: var(--button-bg-color); /* Borde azul al enfocar */
+  outline: none;
+}
+
+.errorMessage {
+  color: var(--error-color);
+  font-size: 0.85em;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.loginButton {
+  background-color: var(--button-bg-color);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+  margin-top: 20px;
+}
+
+.loginButton:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-1px); /* Pequeño efecto al pasar el ratón */
+}
+
+.loginButton:active {
+  transform: translateY(0); /* Vuelve a su posición original al hacer clic */
+}
